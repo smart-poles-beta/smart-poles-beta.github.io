@@ -1,22 +1,126 @@
-<script>
-    function password() {
-      var testV = 1;
-      var pass1 = prompt('Enter Your Password', ' ');
-      while (testV < 3) {
-        if (!pass1)
-          history.go(-1);
-        if (pass1.toLowerCase() == "Smartpoles") {
-          alert('Password Correct');
-          window.open("Yournextpage.html");
-          break;
-        }
-        testV += 1;
-        var pass1 =
-          prompt('Access Denied - Password Incorrect, Please Try Again.', 'Password');
-      }
-      if (pass1.toLowerCase() != "password" & testV == 3)
-        history.go(-1);
-      return " ";
+<!DOCTYPE html>
+<html>
+<title>Test Bed</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif
     }
+    
+    .w3-bar,
+    h1,
+    button {
+        font-family: "Montserrat", sans-serif
+    }
+    
+    .fa-anchor,
+    .fa-coffee {
+        font-size: 200px
+    }
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="https://my-math-quiz.github.io/Beta/home-page-beta/Home-page-beta.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+            <a href="https://my-math-quiz.github.io/Beta/Geometry-beta/geometry-beta.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Math</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Science</a>
+            <a href="https://my-math-quiz.github.io/Beta/history/history-page-beta.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">History</a>
+            <a href="https://my-math-quiz.github.io/Beta/Spanish/spanish-beta.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Spanish</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">English</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">map</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">About us</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">button 3</a>
+            <a href="https://my-math-quiz.github.io/Beta/Spanish/spanish-beta.html" class="w3-bar-item w3-button w3-padding-large">Spanish</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">button 4</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">My Math Quiz</h1>
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>What We Do</h1>
+                <h5 class="w3-padding-32">We create quizes for your use!</h5>
+
+                <p class="w3-text-grey">We will provide a variety of quiz questions in each subject and a varietry of questions covering different topics in those subjects. Feel free to have a look at what all is here.
+                </p>
+            </div>
+
+            <div class="w3-third w3-center">
+                <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+            </div>
+
+            <div class="w3-twothird">
+                <h1>about us</h1>
+                <h5 class="w3-padding-32">We are a small group from a school working on a project to create quizes and a website for each subject. We want our website to be enjoyable and of your use.</h5>
+
+                <p class="w3-text-grey"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+        <h1 class="w3-margin w3-xlarge">Quote: Education is a passport to the future.</h1>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+        <div class="w3-xlarge w3-padding-32">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
     </script>
-    <input type="button" class="btn btn-default btn-lg" value="Log In" onClick="passWord()">
+
+</body>
+
+</html>
