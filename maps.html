@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-gs/v0.53.1/mapbox-gl.css">
+<script src="https://api.mapbox.com/mapbox-gl-gs/v0.53.1/mapbox-gl.js"></script>
 <style>
     body,
     h1,
@@ -61,6 +63,19 @@
     <header class="w3-container w3-red w3-center" style="padding:128px 16px">
         <h1 class="w3-margin w3-jumbo">Map</h1>
     </header>
+    
+    <main>
+        <div id="map"></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiamFjb2JoMTI0NSIsImEiOiJjanQ2NjF2YzMwZHR0NDNxeHhudDg1cW8wIn0.7cYit7_59VEJL--ZTc9fNA';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [35.04262, -85.29918],
+                zoom: 20
+            });
+        </script>
+    </main>
 
     <!-- Footer -->
     <footer class="w3-container w3-padding-64 w3-center w3-opacity">
