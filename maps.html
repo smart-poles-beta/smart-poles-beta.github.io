@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-gs/v0.53.1/mapbox-gl.css">
-<script src="https://api.mapbox.com/mapbox-gl-gs/v0.53.1/mapbox-gl.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css">
+<script src="https://api.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js"></script>
 <style>
     body,
     h1,
@@ -75,7 +75,7 @@
             var map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/streets-v11',
-                center: [35.04262, -85.29918],
+                center: [-85.29918, 35.04262],
                 zoom: 20
             });
         </script>
